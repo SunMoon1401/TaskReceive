@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskReceiverMVC", "TaskReceiverMVC.csproj", "{A853F399-68C9-49C5-839F-FBD8D3E438F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A853F399-68C9-49C5-839F-FBD8D3E438F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A853F399-68C9-49C5-839F-FBD8D3E438F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A853F399-68C9-49C5-839F-FBD8D3E438F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A853F399-68C9-49C5-839F-FBD8D3E438F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE971B88-EFBA-4571-B73B-9ED09E1626E8}
+	EndGlobalSection
+EndGlobal

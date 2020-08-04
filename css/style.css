@@ -1,0 +1,311 @@
+﻿
+.container {
+	width: 1200px;
+	height: 1030px;
+	margin: auto;
+	border: 2px solid black;
+}
+.header {
+	width: 1106px;
+	height: 100px;
+	position: relative;
+}
+	.header .website {
+		width: 330px;
+		height: 45%;
+		margin: 26px;
+		position: absolute;
+	}
+
+	.header .numberstk {
+		width: 600px;
+		height: 45%;
+		margin: 26px;
+		position: absolute;
+		right: 10px;
+	}
+.body {
+	width: 1105px;	
+	height: 650px;
+}
+	.body .box1, .box3 {
+		width: 1105px;
+		height: 269px;
+	}
+.t1 {
+	margin: 10px;
+	width: 540px;
+	height: 229px;
+	border: 2px solid rgb(93, 91, 233);
+	float: left;
+	text-align: left;
+	border-radius: 5px;
+	top: 50px;
+}
+
+.t2 {
+	margin: 10px;
+	width: 523px;
+	height: 229px;
+	border: 2px solid red;
+	float: left;
+}
+
+.body .box2 {
+	width: 540px;
+	height: 80px;
+	border: 2px solid rgb(228, 131, 66);
+	margin: 10px;
+}
+
+.body .box4 {
+	width: 535px;
+	height: 45px;
+	margin-left: 10px;
+}
+
+.footer {
+	width: 1000px;
+	height: 201px;
+	text-align: center;
+}
+
+#button1 {
+	margin-left: 115px;
+	height: 45px;
+	color: black;
+	font-size: 20px;
+	background-color: #e7e7e7;
+	color: black; /* Gray */
+	background: #ddd;
+	margin-top: 45px;
+}
+
+#ws {
+	margin-left: 10px;
+	width: 180px;
+	position: absolute;
+}
+
+h5 {
+	margin: 20px;
+}
+
+h4 {
+	margin-left: 40px;
+}
+
+p1 {
+	margin: 23px;
+}
+
+#AccountNumber {
+	margin-left: 30px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#quantity {
+	margin-left: 30px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+.quantity1 {
+	margin-left: 81px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#quantity2 {
+	margin-left: 49px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#quantity3 {
+	margin-left: 83px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#quantity4 {
+	margin-left: 101px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+.radio {
+	margin-left: 50px;
+}
+
+#radio2 {
+	margin-left: 100px;
+}
+
+#MaxCreditLimit {
+	margin-left: 20px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#TotalCredit {
+	margin-left: 70px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#MaxPerBet {
+	margin-left: 100px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#MaxBetMatch {
+	margin-left: 78px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+#MaxBetNumberGame {
+	margin-left: 20px;
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+
+label.text-nowrap {
+	margin-left: 20px;
+}
+
+#PassWord {
+	margin-left: 10px;
+}
+#FirstName {
+	margin-left: 4px;
+}
+#LastName {
+	margin-left: 4px;
+}
+#us {
+	width: 180px;
+	position: absolute;
+	border: 1px #d5d5d5 solid;
+	border-radius: 3px;
+	padding: 4px 3px;
+	font-family: "Open Sans", arial !important;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	float: right;
+	font-size: 15px;
+	color: #444;
+}
+	#us #PassWord {
+		margin-left: 10px;
+	}
+
+		#us #FirstName {
+		margin-left: 4px;
+	}
+
+	#us #LastName {
+		margin-left: 4px;
+	}
+
+
+a.p-3.mb-2.bg-dark.text-white {
+	margin-left: 118px;
+}
+
+#DropDownListW {
+	width: 245px;
+}
+.commission {
+	height: 96px;
+	width: 536px;
+}

@@ -1,0 +1,14 @@
+﻿@Html.ActionLink("Back to List", "Index")
+
+@{
+	ViewBag.Title = "Home Page";
+}
+	<br><br>
+	<div class="btn-block">
+		<p1 style="padding:2px;width:70px;">
+			<button onclick="location.href='@Url.Action("AddNewDownLine", "Home")';return false;">Continute</button>
+
+		</p1>
+
+		<button onclick="location.href='@Url.Action("Index", "Home")';return false;">Cancel</button>
+	</div>

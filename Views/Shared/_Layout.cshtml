@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="/css/style.css" rel="stylesheet" />
+	<!-- Bootstrap-->
+	<link href="/Bootstrap/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<!-- JS, Popper.js, and jQuery -->
+	<title>@ViewBag.Title - TẠO TÀI KHOẢN TUYẾN DƯỚI</title>
+	@Styles.Render("~/Content/css")
+</head>
+<body>
+	<div class="container">
+		<div class="alert alert-success" align="center">
+			TẠO TÀI KHOẢN TUYẾN DƯỚI
+		</div>
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+		</footer>
+	</div>
+	<script src="/Bootstrap/Bootstrap/js/bootstrap.js"></script>
+	<script src="/css/JavaScript.js"></script>
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

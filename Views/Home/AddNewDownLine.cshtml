@@ -1,0 +1,170 @@
+﻿@model TaskReceiverMVC.Models.GUIModel
+@{
+	ViewBag.Title = "AddNewDownLine";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+	@*< class="container">*@
+			@using (Html.BeginForm("AddNewDownLine", "Home", FormMethod.Post))
+			{
+				<div class="header">
+					<div class="website">
+						<h6>
+							WebSite:
+							@Html.DropDownListFor(model => model.DropDownListWed,
+							new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropWeb))),
+							"3IN1")
+						</h6>
+					</div>
+					<div class="numberstk">
+						<h6>
+							Số lượng tài khoản:
+							@Html.TextBoxFor(model => model.AccountNumber, new { type = "number", min = "0", max = "100" })
+						</h6>
+					</div>
+				</div>
+				<div class="body">
+					<div class="box1">
+						<div class="t1">
+							<h5> THÔNG TIN CHUNG </h5>
+							&ensp;
+								@Html.Label("Username : ", htmlAttributes: new { @class = "" })&ensp;<i>ten kh</i>
+								@Html.DropDownListFor(model => model.DropDownListUser,
+								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
+								"-- Select --")
+								@Html.DropDownListFor(model => model.DropDownListUser,
+								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
+								"-- Select --")
+								@Html.DropDownListFor(model => model.DropDownListUser,
+								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))), 
+								"-- Select --")
+								@Html.CheckBoxFor(model => model.IsChecked, new {id = "IsChecked" })
+								<span><small>Tự động</small></span>	
+							<br />	
+							<p1>
+								@Html.Label("Password : ", htmlAttributes: new { @class = "text-nowrap" })
+								@Html.PasswordFor(model => model.PassWord, new { htmlAttributes = new 
+						   {
+								@class = "form-control",
+								@required = "required",
+								@MaxLength = "300",
+					   @pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+					   @oninvalid = "this.setCustomValidity('Vui lòng nhập mật khẩu')",
+					   @oninput = "setCustomValidity('')"
+					}
+						})
+								@Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+							</p1>
+							<br />
+							<br />
+							<p1>
+								@Html.Label("FirstName : ", htmlAttributes: new { @class = "text-nowrap" })
+								@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new
+							{
+								@class = "form-control",
+								@required = "required",
+								@MaxLength = "300",
+						@pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+						@oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
+						@oninput = "setCustomValidity('')"
+					}
+						})
+								@Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+							</p1>
+							<br />
+							<p1>
+
+								@Html.Label("LastName : ", htmlAttributes: new { @class = "text-nowrap" })
+								@Html.EditorFor(model => model.LastName, new { htmlAttributes = new
+							{
+								@class = "form-control",
+								@required = "required",
+								@MaxLength = "300",
+						@pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+						@oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
+						@oninput = "setCustomValidity('')"
+					}
+						})
+								@Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+							</p1>
+						</div>
+						<div class="t2">
+							<h5>CREDIT</h5>
+							<br />
+							@Html.Label(" (AG) Total Credit : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.TotalCredit, new { type = "number", min = "0", max = "100" })
+							<br /><br />
+							@Html.Label(" (MEM) Max Credit Limit : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.MaxCreditLimit, new { type = "number", min = "0", max = "100" })
+							<br><br><br><br>
+						</div>
+					</div>
+					<div class="box2">
+						<div class="commission">
+							<h5> COMMISSION</h5>
+							<div class="radio">
+								@Html.RadioButtonFor(model => model.Commission, "0.0025")&ensp;0.0025
+								&ensp;&ensp;&ensp;&ensp;&ensp;
+								@Html.RadioButtonFor(model => model.Commission, "0")&ensp;0
+							</div>
+							<br><br><br><br>
+						</div>
+					</div>
+					<div class="box3">
+						<div class="t1">
+							<h5> MAIN BET LIMIT </h5>
+							<br />
+							@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100" })
+							<br><br>
+							@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100" })
+							<br><br>
+						</div>
+						<div class="t2">
+							<h5> SUB BET LIMIT  </h5>
+							<br />
+							@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100" })
+							<br><br>
+							@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
+							@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100" })
+							<br><br>
+
+							@Html.Label(" Max Bet Number Game : ", htmlAttributes: new { @class = "text-nowrap"})
+							@Html.TextBoxFor(model => model.MaxBetNumberGame, new { type = "number", min = "0", max = "100" })
+							<br><br><br><br>
+						</div>
+					</div>
+					<div class="box4">
+						<div class="form-check-labe">
+							<br>
+							<p1>
+								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
+								<span><large>Đăng nhập lần đầu => @ViewBag.ReCreationCount </large></span>
+								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
+								<span><large>Tạo sub => @ViewBag.ReCreationCount </large></span>
+								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
+								<span><large>Đăng nhập sub lần đầu @ViewBag.ReCreationCount </large></span>
+								<br />
+							</p1>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<br>
+					<div class="line">
+						<input id="button1" type="submit" value="TẠO TÀI KHOẢN" />
+						<br /><br />
+						<a href="@Url.Action("Index","Home")" class="p-3 mb-2 bg-dark text-white">TRỞ VỀ TRANG CHỦ</a>
+					</div>
+					<br>
+				</div>
+			}
+</body>
+</html>
