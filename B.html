@@ -27,10 +27,10 @@
     <script>
         $("#IsChecked").click(function () {
             if ($("#IsChecked").is(":checked")) {
-                $("#DropDownListUser").prop("disabled", true);
+				$("#DropDownListUser").prop("disabled", false);
             }
             else {
-                $("#DropDownListUser").removeAttr("disabled");
+                $("#DropDownListUser").removeAttr("disabled", true);
             }
         })
     </script>

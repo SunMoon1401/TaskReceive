@@ -1,311 +1,162 @@
-﻿
-.container {
-	width: 1200px;
-	height: 1030px;
-	margin: auto;
-	border: 2px solid black;
-}
-.header {
-	width: 1106px;
-	height: 100px;
+﻿.container {
+	margin: 80px auto;
+	width: 1002px;
+	height: auto;
+	border: 1px solid #000;	
+	border-radius: 10px;
+	padding: 10px;
 	position: relative;
+	font-family: 'Open Sans', sans-serif;
 }
-	.header .website {
-		width: 330px;
-		height: 45%;
-		margin: 26px;
-		position: absolute;
+	/* ------ Header Start ------ */
+	.container .header {
+		font: normal small-caps 200 20px/30px Arial, Helvetica, sans-serif;
+		text-align: center;
+		letter-spacing: 9px;
+		word-spacing: 4px;
+		font-weight: 500;
+		font-family: 'Josefin Slab', serif;
+		height: 80px;
+		justify-content: center;
+		display: flex;
+		font-size: 33px;
+		padding-top: 10px;
+		color: lightseagreen;
+	}
+	/* ------ Header End ------ */
+
+	/* ------ Main Start ------ */
+	.container .main {
+		height: auto;
 	}
 
-	.header .numberstk {
-		width: 600px;
-		height: 45%;
-		margin: 26px;
-		position: absolute;
-		right: 10px;
-	}
-.body {
-	width: 1105px;	
-	height: 650px;
-}
-	.body .box1, .box3 {
-		width: 1105px;
-		height: 269px;
-	}
-.t1 {
-	margin: 10px;
-	width: 540px;
-	height: 229px;
-	border: 2px solid rgb(93, 91, 233);
-	float: left;
-	text-align: left;
-	border-radius: 5px;
-	top: 50px;
-}
+		.container .main .box {
+			display: grid;
+			grid-template-columns: 30% 70%;
+			margin-top: 8px;
+		}
 
-.t2 {
-	margin: 10px;
-	width: 523px;
-	height: 229px;
-	border: 2px solid red;
-	float: left;
-}
+		.container .main .boxa {
+			display: grid;
+			grid-template-columns: 42% 58%;
+			margin-top: 20px;
+		}
 
-.body .box2 {
-	width: 540px;
-	height: 80px;
-	border: 2px solid rgb(228, 131, 66);
-	margin: 10px;
-}
+		.container .main .box1 {
+			width: 535px;
+			height: 45px;
+			border: 1px solid rgb(71, 178, 221);
+			margin-left: 10px;
+		}
 
-.body .box4 {
-	width: 535px;
-	height: 45px;
-	margin-left: 10px;
-}
+		.container .main .commission {
+			height: auto;
+			margin-left: 10px;
+		}
 
-.footer {
-	width: 1000px;
-	height: 201px;
-	text-align: center;
-}
+		.container .main .form-input {
+			margin: 0px;
+			color: black;
+			height: 830px;
+		}
 
-#button1 {
-	margin-left: 115px;
-	height: 45px;
-	color: black;
-	font-size: 20px;
-	background-color: #e7e7e7;
-	color: black; /* Gray */
-	background: #ddd;
-	margin-top: 45px;
-}
+		.container .main .btn {
+			width: 140px;
+		}
 
-#ws {
-	margin-left: 10px;
-	width: 180px;
-	position: absolute;
-}
+		.container .main a {
+			color: white;
+		}
 
-h5 {
-	margin: 20px;
-}
+			.container .main a:hover {
+				text-decoration: none;
+				color: white;
+			}
 
-h4 {
-	margin-left: 40px;
-}
+		.container .main .view {
+			color: gray;
+			margin: 5px 0px 0px 20px;
+			width: 250px;
+			border: 1px #d5d5d5 solid;
+			border-radius: 4px;
+			padding: 4px 3px;
+			font-family: "Open Sans", arial !important;
+			box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+			font-size: 15px;
+			color: #444;
+		}
+		#AccountNumber{
+			width:200px;
+		}
 
-p1 {
-	margin: 23px;
-}
+		.container .main .title-tables {
+			display: flex;
+			margin-bottom: 3px;
+			margin-left: 5px;
+			font: normal small-caps 200 20px/30px Arial, Helvetica, sans-serif;
+		}
 
-#AccountNumber {
-	margin-left: 30px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			.row.info {
+				height: auto;
+				margin: 10px;
+			}
 
-#quantity {
-	margin-left: 30px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			.row .r1 {
+				border-radius: 10px;
+				margin: 5px 0px;
+				height: auto;
+			}
 
-.quantity1 {
-	margin-left: 81px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			.row .r2 {
+				text-align: left;
+				border-radius: 10px;
+				margin: 5px 0px;
+				height: auto;
+			}
+			/* Khoảng cách của tất cả các lable   */
+			.allable {
+				margin: 15px;
+			}
 
-#quantity2 {
-	margin-left: 49px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			.container .main .btn-ba {
+				text-align: center;
+				margin: 30px;
+			}
 
-#quantity3 {
-	margin-left: 83px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			#custom {
+				width: 60px;
+				margin-left: 5px;
+			}
 
-#quantity4 {
-	margin-left: 101px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
-.radio {
-	margin-left: 50px;
-}
+			.checkbox {
+				margin: 5px 2px 5px 10px;
+			}
 
-#radio2 {
-	margin-left: 100px;
-}
+			.IsCheckedd {
+				margin: 5px 10px 5px 25px;
+			}
 
-#MaxCreditLimit {
-	margin-left: 20px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			select#DropDownListUser {
+				width: 15%;
+			}
 
-#TotalCredit {
-	margin-left: 70px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			#radio {
+				margin: 5px 20px 5px 25px;
+			}
+			#Commission {
+				margin: 4px 25px 0px 20px;
+			}
 
-#MaxPerBet {
-	margin-left: 100px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			i {
+				margin-left: 8px;
+			}
 
-#MaxBetMatch {
-	margin-left: 78px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
+			.selectws {
+				width: 100px;
+			}
+			/* ------ Main End ------ */
 
-#MaxBetNumberGame {
-	margin-left: 20px;
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
+			/* ------ Footer Start ------ */
+.container .footer {
 }
-
-label.text-nowrap {
-	margin-left: 20px;
-}
-
-#PassWord {
-	margin-left: 10px;
-}
-#FirstName {
-	margin-left: 4px;
-}
-#LastName {
-	margin-left: 4px;
-}
-#us {
-	width: 180px;
-	position: absolute;
-	border: 1px #d5d5d5 solid;
-	border-radius: 3px;
-	padding: 4px 3px;
-	font-family: "Open Sans", arial !important;
-	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-	float: right;
-	font-size: 15px;
-	color: #444;
-}
-	#us #PassWord {
-		margin-left: 10px;
-	}
-
-		#us #FirstName {
-		margin-left: 4px;
-	}
-
-	#us #LastName {
-		margin-left: 4px;
-	}
-
-
-a.p-3.mb-2.bg-dark.text-white {
-	margin-left: 118px;
-}
-
-#DropDownListW {
-	width: 245px;
-}
-.commission {
-	height: 96px;
-	width: 536px;
-}
+/* ------ Footer End ------ */

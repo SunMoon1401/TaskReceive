@@ -40,5 +40,3 @@ namespace TaskReceiverMVC.Controllers
 		}
 	}
 }
-
-	

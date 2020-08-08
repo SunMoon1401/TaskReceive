@@ -3,168 +3,229 @@
 	ViewBag.Title = "AddNewDownLine";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@*====================NEW FIX ADD NEW DOWN LINE================================*@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TẠO TÀI KHOẢN TUYẾN DƯỚI</title>
+	<link rel="stylesheet" href="/Bootstrap/Bootstrap/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/css/JavaScript.js"></script>
 </head>
 <body>
-	@*< class="container">*@
-			@using (Html.BeginForm("AddNewDownLine", "Home", FormMethod.Post))
-			{
-				<div class="header">
-					<div class="website">
-						<h6>
+	<div class="container">
+		@using (Html.BeginForm("AddNewDownLine", "Home", FormMethod.Post))
+		{
+			<!-- ----------- Header Start ----------- -->
+			<div class="row header">
+				TẠO TÀI KHOẢN TUYẾN DƯỚI
+			</div>
+			<!-- ----------- Header End ----------- -->
+			<!-- ----------- Main Start ----------- -->
+			<div class="row main">
+				<div class="col">
+					<div class="row">
+						<div class="col-4">
 							WebSite:
-							@Html.DropDownListFor(model => model.DropDownListWed,
-							new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropWeb))),
-							"3IN1")
-						</h6>
-					</div>
-					<div class="numberstk">
-						<h6>
+								@Html.DropDownListFor(model => model.DropDownListWed,
+						new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropWeb))),
+						"3IN1")
+						</div>
+						<div class="col-8">
 							Số lượng tài khoản:
 							@Html.TextBoxFor(model => model.AccountNumber, new { type = "number", min = "0", max = "100" })
-						</h6>
-					</div>
-				</div>
-				<div class="body">
-					<div class="box1">
-						<div class="t1">
-							<h5> THÔNG TIN CHUNG </h5>
-							&ensp;
-								@Html.Label("Username : ", htmlAttributes: new { @class = "" })&ensp;<i>ten kh</i>
-								@Html.DropDownListFor(model => model.DropDownListUser,
-								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
-								"-- Select --")
-								@Html.DropDownListFor(model => model.DropDownListUser,
-								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
-								"-- Select --")
-								@Html.DropDownListFor(model => model.DropDownListUser,
-								new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))), 
-								"-- Select --")
-								@Html.CheckBoxFor(model => model.IsChecked, new {id = "IsChecked" })
-								<span><small>Tự động</small></span>	
-							<br />	
-							<p1>
-								@Html.Label("Password : ", htmlAttributes: new { @class = "text-nowrap" })
-								@Html.PasswordFor(model => model.PassWord, new { htmlAttributes = new 
-						   {
-								@class = "form-control",
-								@required = "required",
-								@MaxLength = "300",
-					   @pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
-					   @oninvalid = "this.setCustomValidity('Vui lòng nhập mật khẩu')",
-					   @oninput = "setCustomValidity('')"
-					}
-						})
-								@Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
-							</p1>
-							<br />
-							<br />
-							<p1>
-								@Html.Label("FirstName : ", htmlAttributes: new { @class = "text-nowrap" })
-								@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new
-							{
-								@class = "form-control",
-								@required = "required",
-								@MaxLength = "300",
-						@pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
-						@oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
-						@oninput = "setCustomValidity('')"
-					}
-						})
-								@Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-							</p1>
-							<br />
-							<p1>
-
-								@Html.Label("LastName : ", htmlAttributes: new { @class = "text-nowrap" })
-								@Html.EditorFor(model => model.LastName, new { htmlAttributes = new
-							{
-								@class = "form-control",
-								@required = "required",
-								@MaxLength = "300",
-						@pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
-						@oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
-						@oninput = "setCustomValidity('')"
-					}
-						})
-								@Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-							</p1>
-						</div>
-						<div class="t2">
-							<h5>CREDIT</h5>
-							<br />
-							@Html.Label(" (AG) Total Credit : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.TotalCredit, new { type = "number", min = "0", max = "100" })
-							<br /><br />
-							@Html.Label(" (MEM) Max Credit Limit : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.MaxCreditLimit, new { type = "number", min = "0", max = "100" })
-							<br><br><br><br>
 						</div>
 					</div>
-					<div class="box2">
-						<div class="commission">
-							<h5> COMMISSION</h5>
-							<div class="radio">
-								@Html.RadioButtonFor(model => model.Commission, "0.0025")&ensp;0.0025
-								&ensp;&ensp;&ensp;&ensp;&ensp;
-								@Html.RadioButtonFor(model => model.Commission, "0")&ensp;0
+					<div class="row info">
+						<div class="col r1 form-control">
+							<div class="col title-tables">
+								THÔNG TIN CHUNG
 							</div>
-							<br><br><br><br>
+							<label class="form-group allable">
+								@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>ten kh</i>
+								@Html.DropDownListFor(model => model.DropDownListUser,
+					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
+					 "Select", new { value = "checkboxWebsite" })
+								@Html.DropDownListFor(model => model.DropDownListUser,
+					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
+					 "Select", new { value = "checkboxWebsite" })
+								@Html.DropDownListFor(model => model.DropDownListUser,
+					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
+					 "Select", new { value = "checkboxWebsite", @class = "checkboxWebsite3IN1" })
+								@Html.CheckBoxFor(model => model.IsChecked, new { @class= "checkbox", value = "checkboxWebsite" })
+								<label> Tự động</label>
+							</label>
+							<div class="form-group allable">
+								<div class="box">
+									@Html.Label("PassWord : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.PasswordFor(model => model.PassWord, new
+									{
+										htmlAttributes = new
+							   {
+									@class = "form-control",
+									@required = "required",
+									@type="password",
+									@MaxLength = "300",
+									@pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+									@oninvalid = "this.setCustomValidity('Thử lại, mật khẩu cần có ít nhất một kí tự hoa, thường và 1 chữ số')",
+									@oninput = "setCustomValidity('')"
+									}
+							})
+									@Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="box">
+									@*<label class="lable">FirstName:</label>
+									<input type="text" minlength="8" maxlength="30" name="nam" class="form-control view" required>*@
+									@Html.Label("FirstName : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.EditorFor(model => model.FirstName, new
+							   {
+								   htmlAttributes = new
+								   {
+									   @class = "form-control ",
+									   @required = "required",
+									   @MaxLength = "300",
+									   @pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+									   @oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
+									   @oninput = "setCustomValidity('')"
+								   }
+							   })
+									@Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="box">
+									@*<label class="lable">LastName:</label>
+									<input type="text" minlength="8" maxlength="30" name="nam" class="form-control view" required>*@
+									@Html.Label("LastName : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.EditorFor(model => model.LastName, new
+							   {
+								   htmlAttributes = new
+								   {
+									   @class = "form-control ",
+									   @required = "required",
+									   @MaxLength = "300",
+									   @pattern = "^[a-zA-Z0-9!@#$%^&*()-_+=[]{};:'?/<>.,]*",
+									   @oninvalid = "this.setCustomValidity('Vui lòng nhập tên')",
+									   @oninput = "setCustomValidity('')"
+								   }
+							   })
+									@Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="col r2 form-control">
+							<div class="col title-tables">
+								CREDIT
+							</div>
+							<div class="form-group allable">
+								<div class="boxa">
+									@*<label class="lable">(AG) Total Credit:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" (AG) Total Credit : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.TotalCredit, new { type = "number", min = "0", max = "100", @class = "form-control " })									
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="boxa">
+									@*<label class="lable">(MEM) Max Credit Limit:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" (MEM) Max Credit Limit : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxCreditLimit, new { type = "number", min = "0", max = "100", @class = "form-control " })
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="box3">
-						<div class="t1">
-							<h5> MAIN BET LIMIT </h5>
-							<br />
-							@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100" })
-							<br><br>
-							@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100" })
-							<br><br>
+					<div class="row info">
+						<div class="col-6 r1 form-control">
+							<div class="row title-tables">
+								COMMISSION
+							</div>
+							<div class="row commission">
+								@Html.RadioButtonFor(model => model.Commission,"0.0025")
+								<label for="radio" class="radio-button">0.0025</label>
+								@Html.RadioButtonFor(model => model.Commission, "0")
+								<label for="radio" class="radio-button">0</label>
+							</div>
 						</div>
-						<div class="t2">
-							<h5> SUB BET LIMIT  </h5>
-							<br />
-							@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100" })
-							<br><br>
-							@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
-							@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100" })
-							<br><br>
-
-							@Html.Label(" Max Bet Number Game : ", htmlAttributes: new { @class = "text-nowrap"})
-							@Html.TextBoxFor(model => model.MaxBetNumberGame, new { type = "number", min = "0", max = "100" })
-							<br><br><br><br>
+						<div class="col-6 r2">
 						</div>
 					</div>
-					<div class="box4">
-						<div class="form-check-labe">
-							<br>
-							<p1>
-								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
-								<span><large>Đăng nhập lần đầu => @ViewBag.ReCreationCount </large></span>
-								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
-								<span><large>Tạo sub => @ViewBag.ReCreationCount </large></span>
-								@Html.CheckBox("IsChecked", new { htmlAttributes = new { @class = "form-control", @maxlength = "300" } })
-								<span><large>Đăng nhập sub lần đầu @ViewBag.ReCreationCount </large></span>
-								<br />
-							</p1>
+					<div class="row info">
+						<div class="col-6 r1 form-control">
+							<div class="col title-tables">
+								MAIN BET LIMIT
+							</div>
+							<div class="form-group allable">
+								<div class="box">
+									@*<label class="lable">Max Per Bet:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100", @class="form-control "})
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="box">
+									@*<label class="lable">Max Bet Match:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100", @class = "form-control " })
+								</div>
+							</div>
 						</div>
+						<div class="col-6 r2 form-control">
+							<div class="col title-tables">
+								SUB BET LIMIT
+							</div>
+							<div class="form-group allable">
+								<div class="boxa">
+									@*<label class="lable">Max Per Bet:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100", @class = "form-control " })
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="boxa">
+									@*<label class="lable">Max Bet Match:</label>
+									<input type="number" class="form-control view" required>*@
+									@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100", @class = "form-control " })
+								</div>
+							</div>
+							<div class="form-group allable">
+								<div class="boxa">
+									@*<label class="lable">Max Bet Number Game:</label>
+									<input id="MaxBetNumberGame" type="number" class="form-control view" required>*@
+									@Html.Label(" Max Bet Number Game : ", htmlAttributes: new { @class = "text-nowrap" })
+									@Html.TextBoxFor(model => model.MaxBetNumberGame, new { type = "number", min = "0", max = "100", @class = "form-control " })
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						@Html.CheckBox("IsChecked", new { value = "chkFirstLogin" })
+						<label for="checkbox"> Đăng nhập lần đầu =></label>
+						@Html.CheckBox("IsChecked", new { value = "chkCreateSub" })
+						<label for="checkbox"> Tạo sub =></label>
+						@Html.CheckBox("IsChecked", new { value = "chkFirstLoginSub" })
+						<label for="checkbox"> Đăng nhập sub lần đầu </label>
+					</div>
+					<div class="btn-ba">
+						@*<button type="reset" data-toggle="tooltip" data-placement="top" title="Trở về" class="btn btn-danger">Trở về</button>*@
+						<a href="@Url.Action("Index","Home")" type="reset" data-toggle="tooltip" data-placement="top" title="Trở về" class="btn btn-danger">TRỞ VỀ </a>
+						<button type="submit" data-toggle="tooltip" data-placement="top" title="Tạo tài khoản" class="btn btn-success">TẠO TÀI KHOẢN</button>
 					</div>
 				</div>
-				<div class="footer">
-					<br>
-					<div class="line">
-						<input id="button1" type="submit" value="TẠO TÀI KHOẢN" />
-						<br /><br />
-						<a href="@Url.Action("Index","Home")" class="p-3 mb-2 bg-dark text-white">TRỞ VỀ TRANG CHỦ</a>
-					</div>
-					<br>
-				</div>
-			}
-</body>
+			</div>
+		<!-- ----------- Main End ----------- -->
+		<div class="row footer">
+		</div>
+	}
+	</div>
+	</body>
 </html>
