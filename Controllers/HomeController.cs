@@ -34,7 +34,7 @@ namespace TaskReceiverMVC.Controllers
 		}
 		[HttpPost]
 		public ActionResult AddNewDownLine(string PassWord, string FirstName, string LastName, double Commission,
-			int TotalCredit, int MaxCreditLimit, int MaxPerBet, int MaxBetMatch, int MaxBetNumberGame, int AccountNumber)
+			int TotalCredit, int MaxCreditLimit, int MaxPerBet, int MaxBetMatch, int AccountNumber)
 		{
 			return View();
 		}

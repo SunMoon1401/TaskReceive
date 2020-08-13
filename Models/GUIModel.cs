@@ -57,20 +57,15 @@ namespace TaskReceiverMVC.Models
     }
     public enum DropWeb
     {
+        [Description("3IN1")]
         VIVA88, SBOBET,
         SV388, S128,
         WBET, OK368,
         HK1101, LD789,
         LASVEGAS, SGD,
-        [Description("3IN1")]
-        ThreeSome
     }
     public enum DropUser
     {
-        Player1,
-        Player2,
-        Player3
+        a0,a1,a2,a3,a4,a5,a6,a7,a8,a9
     }
-
-
 }

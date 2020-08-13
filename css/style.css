@@ -91,8 +91,7 @@
 
 		.container .main .title-tables {
 			display: flex;
-			margin-bottom: 3px;
-			margin-left: 5px;
+			margin: 5px 0px 3px 5px;
 			font: normal small-caps 200 20px/30px Arial, Helvetica, sans-serif;
 		}
 
@@ -103,14 +102,16 @@
 
 			.row .r1 {
 				border-radius: 10px;
-				margin: 5px 0px;
+				margin: 5px 10px 5px 0px;
 				height: auto;
+				width: 530px;
 			}
 
 			.row .r2 {
 				text-align: left;
 				border-radius: 10px;
-				margin: 5px 0px;
+				margin: 5px 0px 5px 10px;
+				width: 535px;
 				height: auto;
 			}
 			/* Khoảng cách của tất cả các lable   */
@@ -128,16 +129,15 @@
 				margin-left: 5px;
 			}
 
-			.checkbox {
-				margin: 5px 2px 5px 10px;
+			#checkboxuser {
+				margin: 5px 5px 5px 5px;
 			}
-
-			.IsCheckedd {
-				margin: 5px 10px 5px 25px;
+			#IsChecked {
+				margin: 5px 5px 5px 20px;
 			}
-
 			select#DropDownListUser {
 				width: 15%;
+				margin-left: 5px;
 			}
 
 			#radio {
@@ -147,12 +147,14 @@
 				margin: 4px 25px 0px 20px;
 			}
 
-			i {
-				margin-left: 8px;
-			}
-
 			.selectws {
 				width: 100px;
+			}
+
+			i{
+				font-family: 'Josefin Slab', serif;
+				color: lightseagreen;
+				margin-left: 8px;
 			}
 			/* ------ Main End ------ */
 

@@ -30,9 +30,10 @@
 					<div class="row">
 						<div class="col-4">
 							WebSite:
-								@Html.DropDownListFor(model => model.DropDownListWed,
+								@*@Html.DropDownListFor(model => model.DropDownListWed,
 						new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropWeb))),
-						"3IN1")
+						"3IN1"*@
+							<span value="website">3IN1</span>
 						</div>
 						<div class="col-8">
 							Số lượng tài khoản:
@@ -40,12 +41,12 @@
 						</div>
 					</div>
 					<div class="row info">
-						<div class="col r1 form-control">
+						<div class="r1 form-control">
 							<div class="col title-tables">
 								THÔNG TIN CHUNG
 							</div>
-							<label class="form-group allable">
-								@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>ten kh</i>
+							<label class="row allable">
+								@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>kjhhiuusw</i>
 								@Html.DropDownListFor(model => model.DropDownListUser,
 					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
 					 "Select", new { value = "checkboxWebsite" })
@@ -55,7 +56,7 @@
 								@Html.DropDownListFor(model => model.DropDownListUser,
 					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
 					 "Select", new { value = "checkboxWebsite", @class = "checkboxWebsite3IN1" })
-								@Html.CheckBoxFor(model => model.IsChecked, new { @class= "checkbox", value = "checkboxWebsite" })
+								@Html.CheckBoxFor(model => model.IsChecked, new { id= "checkboxuser", value = "checkboxWebsite" })
 								<label> Tự động</label>
 							</label>
 							<div class="form-group allable">
@@ -79,8 +80,6 @@
 							</div>
 							<div class="form-group allable">
 								<div class="box">
-									@*<label class="lable">FirstName:</label>
-									<input type="text" minlength="8" maxlength="30" name="nam" class="form-control view" required>*@
 									@Html.Label("FirstName : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.EditorFor(model => model.FirstName, new
 							   {
@@ -99,8 +98,6 @@
 							</div>
 							<div class="form-group allable">
 								<div class="box">
-									@*<label class="lable">LastName:</label>
-									<input type="text" minlength="8" maxlength="30" name="nam" class="form-control view" required>*@
 									@Html.Label("LastName : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.EditorFor(model => model.LastName, new
 							   {
@@ -118,22 +115,19 @@
 								</div>
 							</div>
 						</div>
-						<div class="col r2 form-control">
+						<div class="r2 form-control">
 							<div class="col title-tables">
 								CREDIT
 							</div>
+							<br />
 							<div class="form-group allable">
 								<div class="boxa">
-									@*<label class="lable">(AG) Total Credit:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" (AG) Total Credit : ", htmlAttributes: new { @class = "text-nowrap" })
-									@Html.TextBoxFor(model => model.TotalCredit, new { type = "number", min = "0", max = "100", @class = "form-control " })									
+									@Html.TextBoxFor(model => model.TotalCredit, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
 							</div>
 							<div class="form-group allable">
 								<div class="boxa">
-									@*<label class="lable">(MEM) Max Credit Limit:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" (MEM) Max Credit Limit : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxCreditLimit, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
@@ -141,7 +135,7 @@
 						</div>
 					</div>
 					<div class="row info">
-						<div class="col-6 r1 form-control">
+						<div class="r1 form-control">
 							<div class="row title-tables">
 								COMMISSION
 							</div>
@@ -152,55 +146,46 @@
 								<label for="radio" class="radio-button">0</label>
 							</div>
 						</div>
-						<div class="col-6 r2">
+						<div class="r2">
 						</div>
 					</div>
 					<div class="row info">
-						<div class="col-6 r1 form-control">
+						<div class="r1 form-control">
 							<div class="col title-tables">
 								MAIN BET LIMIT
 							</div>
+							<br />
 							<div class="form-group allable">
 								<div class="box">
-									@*<label class="lable">Max Per Bet:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100", @class="form-control "})
 								</div>
 							</div>
 							<div class="form-group allable">
 								<div class="box">
-									@*<label class="lable">Max Bet Match:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
 							</div>
 						</div>
-						<div class="col-6 r2 form-control">
+						<div class="r2 form-control">
 							<div class="col title-tables">
 								SUB BET LIMIT
 							</div>
 							<div class="form-group allable">
 								<div class="boxa">
-									@*<label class="lable">Max Per Bet:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" Max Per Bet : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxPerBet, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
 							</div>
 							<div class="form-group allable">
 								<div class="boxa">
-									@*<label class="lable">Max Bet Match:</label>
-									<input type="number" class="form-control view" required>*@
 									@Html.Label(" Max Bet Match : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxBetMatch, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
 							</div>
 							<div class="form-group allable">
 								<div class="boxa">
-									@*<label class="lable">Max Bet Number Game:</label>
-									<input id="MaxBetNumberGame" type="number" class="form-control view" required>*@
 									@Html.Label(" Max Bet Number Game : ", htmlAttributes: new { @class = "text-nowrap" })
 									@Html.TextBoxFor(model => model.MaxBetNumberGame, new { type = "number", min = "0", max = "100", @class = "form-control " })
 								</div>
@@ -216,7 +201,6 @@
 						<label for="checkbox"> Đăng nhập sub lần đầu </label>
 					</div>
 					<div class="btn-ba">
-						@*<button type="reset" data-toggle="tooltip" data-placement="top" title="Trở về" class="btn btn-danger">Trở về</button>*@
 						<a href="@Url.Action("Index","Home")" type="reset" data-toggle="tooltip" data-placement="top" title="Trở về" class="btn btn-danger">TRỞ VỀ </a>
 						<button type="submit" data-toggle="tooltip" data-placement="top" title="Tạo tài khoản" class="btn btn-success">TẠO TÀI KHOẢN</button>
 					</div>
