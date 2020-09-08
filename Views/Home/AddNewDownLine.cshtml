@@ -3,14 +3,12 @@
 	ViewBag.Title = "AddNewDownLine";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@*====================NEW FIX ADD NEW DOWN LINE================================*@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TẠO TÀI KHOẢN TUYẾN DƯỚI</title>
+	<title></title>
 	<link rel="stylesheet" href="/Bootstrap/Bootstrap/css/bootstrap.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/css/JavaScript.js"></script>
@@ -45,20 +43,92 @@
 							<div class="col title-tables">
 								THÔNG TIN CHUNG
 							</div>
-							<label class="row allable">
-								@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>kjhhiuusw</i>
-								@Html.DropDownListFor(model => model.DropDownListUser,
-					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
-					 "Select", new { value = "checkboxWebsite" })
-								@Html.DropDownListFor(model => model.DropDownListUser,
-					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
-					 "Select", new { value = "checkboxWebsite" })
-								@Html.DropDownListFor(model => model.DropDownListUser,
-					 new SelectList(Enum.GetValues(typeof(TaskReceiverMVC.Models.DropUser))),
-					 "Select", new { value = "checkboxWebsite", @class = "checkboxWebsite3IN1" })
-								@Html.CheckBoxFor(model => model.IsChecked, new { id= "checkboxuser", value = "checkboxWebsite" })
+							@*<label class="row allable text1">
+								@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>Jhin</i>
+								<select value="checkboxWebsite">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+								</select>
+								<select value="checkboxWebsite">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+								</select>
+								<select class = "checkboxWebsite3IN1">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+								</select>
+								@Html.CheckBoxFor(model => model.IsChecked, new { id = "checkboxuser", value = "checkboxWebsite" })
 								<label> Tự động</label>
-							</label>
+							</label>*@
+
+						<div class="boxtextname">
+							@Html.Label("Username : ", htmlAttributes: new { @class = "text-nowrap" })<i>Jhinali</i>
+							<select value="checkboxWebsite">
+								<option>Select</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+							</select>
+							<select value="checkboxWebsite">
+								<option>Select</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+							</select>
+							<select class="checkboxWebsite3IN1">
+								<option>Select</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+							</select>
+							@Html.CheckBoxFor(model => model.IsChecked, new { id = "checkboxuser", value = "checkboxWebsite" })
+							<label> Tự động</label>
+						</div>
 							<div class="form-group allable">
 								<div class="box">
 									@Html.Label("PassWord : ", htmlAttributes: new { @class = "text-nowrap" })
@@ -200,7 +270,7 @@
 						@Html.CheckBox("IsChecked", new { value = "chkFirstLoginSub" })
 						<label for="checkbox"> Đăng nhập sub lần đầu </label>
 					</div>
-					<div class="btn-ba">
+					<div class="btn-nut">
 						<a href="@Url.Action("Index","Home")" type="reset" data-toggle="tooltip" data-placement="top" title="Trở về" class="btn btn-danger">TRỞ VỀ </a>
 						<button type="submit" data-toggle="tooltip" data-placement="top" title="Tạo tài khoản" class="btn btn-success">TẠO TÀI KHOẢN</button>
 					</div>

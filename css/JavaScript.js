@@ -7,8 +7,8 @@ $(function () {
 
 	chkCreateSub.prop("disabled", true);
 	chkFirstLoginSub.prop("disabled", true);
-	///////////// Xử lý sự kiện //////////////////
 
+	///////////// Xử lý sự kiện //////////////////
 	if (websiteName === "VIVA88") {
 		$("#MaxBetNumberGame").prop("disabled", false);
 		$("#MaxBetNumberGame").attr("required", "required");
@@ -42,7 +42,6 @@ $(function () {
 	//		$(".checkboxWebsite3IN1").hide();
 	//	}
 	//});
-
 	chkFirstLogin.change(function () {
 		if ($(this).is(":checked")) {
 			chkCreateSub.prop("disabled", false);

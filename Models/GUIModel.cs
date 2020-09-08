@@ -13,9 +13,8 @@ namespace TaskReceiverMVC.Models
             string passWord, string firstName, string lastName, 
             double commission, int totalCredit, int maxCreditLimit, int maxPerBet,
             int maxBetMatch, int maxPerBetSub, int maxBetMatchSub, int maxBetNumberGame,
-            int accountNumber, DropUser dropDownListUser, DropWeb dropDownListWed)
+            int accountNumber, DropWeb dropDownListWed)
         {
-            DropDownListUser = dropDownListUser;
             DropDownListWed = dropDownListWed;
             AccountNumber = accountNumber;
             UserName = userName;
@@ -51,7 +50,6 @@ namespace TaskReceiverMVC.Models
         public int MaxPerBetSub { get; set; }
         public int MaxBetMatchSub { get; set; }
         public int MaxBetNumberGame { get; set; }
-        public DropUser DropDownListUser { get; set; }
         public DropWeb DropDownListWed { get; set; }
         public bool IsChecked { get; set; }
     }
@@ -63,9 +61,5 @@ namespace TaskReceiverMVC.Models
         WBET, OK368,
         HK1101, LD789,
         LASVEGAS, SGD,
-    }
-    public enum DropUser
-    {
-        a0,a1,a2,a3,a4,a5,a6,a7,a8,a9
     }
 }
